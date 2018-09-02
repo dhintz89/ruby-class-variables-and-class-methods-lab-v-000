@@ -33,7 +33,7 @@ class Song
         genre_hash[genre] += 1
       else 
         genre_hash[genre] = []
-        genre_hash[genre] += 1
+        genre_hash[genre] = 1
       end
     end
     genre_hash
