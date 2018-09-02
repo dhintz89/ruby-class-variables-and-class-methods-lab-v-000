@@ -8,11 +8,11 @@ class Song
   end
   
   def self.artists
-    @@artists.get_keys.count
+    @@artists.length
   end
   
   def self.genres
-    @@genres.get_keys.count
+    @@genres.length
   end
   
   def self.genre_count
@@ -25,6 +25,8 @@ class Song
   
   def initialize(name, artist, genre)
     @@count += 1
+    @@genres << genre
+    @@artists << artist
   end
   
   attr_accessor :name, :artist, :genre
