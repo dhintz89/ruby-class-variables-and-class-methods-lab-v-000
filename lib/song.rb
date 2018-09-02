@@ -12,9 +12,11 @@ class Song
   end
   
   def self.genres
-    
+    @@genres.get_keys
   end
   
   def self.genre_count
-    @@genres.get_keys.count
+    @@genres.collect do |genre,song|
+      song.length
+    end
   end
