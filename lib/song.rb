@@ -16,11 +16,22 @@ class Song
   end
   
   def self.genre_count
-    @@genres.collect {|genre,song_list| song_list.length}
+    genre_hash = {}
+    @@genres.each do |genre|
+      if genre_hash.get_keys.include?(genre)
+        genre_hash[genre] += 1
+      else 
+        genre_hash[] = genre
+        genre_hash[genre] += 1
+      end
+    end
+  end
+  
+      
   end
   
   def self.artist_count
-    @@artists.collect {|artist, song_list| song_list.length}
+    
   end
   
   def initialize(name, artist, genre)
