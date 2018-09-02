@@ -15,6 +15,7 @@ class Song
     @@genres.get_keys
   end
   
-  # def self.genre_count
-  #   @@genres.collect {|genre,song| song.length}
-  # end
+  def self.genre_count
+    @@genres.collect {|genre,song| song.length}
+  end
+end
